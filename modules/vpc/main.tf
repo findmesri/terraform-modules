@@ -63,7 +63,7 @@ resource "aws_route_table" "prt1" {
 
 #create route table2
 resource "aws_route_table" "prt2" {
-  vpc_id = aws_vpc.example.id
+  vpc_id = aws_vpc.vpc.id
 
   route {
     cidr_block = "0.0.0.0/0"
