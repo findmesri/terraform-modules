@@ -30,7 +30,7 @@ resource "aws_nat_gateway" "nat1" {
 # create nat gateway2
 resource "aws_nat_gateway" "nat2" {
   allocation_id = aws_eip.eip2.id
-  subnet_id     = aws_subnet.pubsub2.id
+  subnet_id     = var.pubsub2
 
   tags = {
     Name = "nat-2"
